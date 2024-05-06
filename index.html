@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn para hojas de estilo con bootstrap5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center col-xxl-8 col-xl-8 col-lg-8">
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">primer ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>
+                        EJERCICIO 1: 
+                    Crear una función que en base a la edad que ingreso el usuario devolver un
+                    mensaje si la persona es mayor de edad o no. Utilizar para la condición el 
+                    operador ternario.
+                    </p>
+                    <button class="btn btn-outline-primary" onclick="calcularEdad()">Calcular edad</button>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">segundo ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>
+                    EJERCICIO 2: Crear una función que determine la nota final de 
+                    un alumno, la cual depende de lo siguiente: <br>
+                    Examen =20% <br>
+                    tareas = 40% <br>
+                    asistencia = 10% <br>
+                    investigación = 30% <br>
+                    Al final deberá mostrar los datos del alumno, nombre, carnet y
+                    nota final
+                    </p>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Ingrese su nombre:</label>
+                            <input type="text" class="form-control" id="nombreEs">
+                        <div>
+                        <div class="mb-3">
+                            <label for="carnet" class="form-label">Ingrese el numero de Carnet:</label>
+                            <input type="text" class="form-control" id="carnet" placeholder="00000000">
+                            
+                        <div class="mb-3">
+                            <label for="examen" class="form-label">Ingrese las notas de examen:</label>
+                            <input type="text" class="form-control" id="examen">
+                        </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carnet" class="form-label">Ingrese las notas de Tareas:</label>
+                            <input type="text" class="form-control" id="tareas">
+                        </div>
+                        <div class="mb-3">
+                            <label for="carnet" class="form-label">Ingrese las notas de Asistencia:</label>
+                            <input type="text" class="form-control" id="asistencia">
+                        </div>
+                        <div class="mb-3">
+                            <label for="investigacion" class="form-label">Ingrese las notas de Investigacion:</label>
+                            <input type="text" class="form-control" id="investigacion">
+                        </div>
+                    <div class="mb-3">
+                        <table class="table" id="tabla_estudiante">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre del estudiante</th>
+                                    <th scope="col">Carnet</th>
+                                    <th scope="col">Examen</th>
+                                    <th scope="col">Tareas</th>
+                                    <th scope="col">Asistencia</th>
+                                    <th scope="col">Investigacion</th>
+                                    <th scope="col">Notal Final</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-outline-primary" onclick="determinarNotaFinal()">nota Final</button>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">tercer ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <p>
+                    <table class="table table-bordered text-center">
+                        <tr>
+                            <th>CATEGORIA</th>
+                            <th>AUMENTO</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>30%</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>20%</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Calcular el aumento de trabajador tomando en cuenta la tabla
+                        de categorías de aumento.
+                        Para este ejercicio deberá de asignar las siguientes 
+                        variables: nombre, salario, categoría y aumento. Deberá 
+                        demostrar los datos del empleado y el aumento salarial.
+                    </p>
+                    <div class="col">
+                        <div class="mb-3">
+                            <form action="">
+                                <label for="nombreEmpleado" class="form-label">Nombre del empleado:</label>
+                            <input type="text" class="form-control" id="nombreEmpleado">
+                            <div class="mb-3">                                
+                                <label for="salario" class="form-label">Ingrese monto de salario:</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="salario">
+                                    <span class="input-group-text">.00</span>
+                                </div>                                                  
+                            </div>
+                            <select class="form-select" aria-label="Default select example" id="categoria">
+                                <option selected>Seleccione categoria de aumento</option>
+                                <option value="A">(15%)</option>                                    
+                                <option value="B">(30%)</option>
+                                <option value="C">(10%)</option>
+                                <option value="D">(20%)</option>
+                            </select>
+                            </form>
+                            <hr>
+                            <table class="table" id="tabla_empleado">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre del empleado</th>
+                                        <th scope="col">Salario</th>
+                                        <th scope="col">Categoria de Aumento</th>
+                                        <th scope="col">Aumento</th>
+                                        <th scope="col">Salario Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-outline-primary" onclick="calcularAumentoSalarial()">guardar datos</button>
+                    </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">cuarto ejercicio</p>
+            <hr class="mb-4">
+            <div class="card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 4: Crear una función que en base a 2 números enteros que ingrese el usuario,
+                        calcular cual número es el mayor y devolverlo</p>
+                            <div class="mb-3">
+                                <label for="n1" class="form-label">Ingrese el primer numero:</label>
+                                <input type="number" class="form-control" id="n1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="n2" class="form-label">Ingrese el segundo numero:</label>
+                                <input type="number" class="form-control" id="n2">
+                            </div>
+                        </form>
+                        <button class="btn btn-outline-primary" onclick="calcularNumero()">calcular</button>
+                </div>
+            </div>
+        </section> 
+
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">Quinto ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 5: <br> Realizar una función para una tienda de coches en donde se deberá calcular:
+                        Si el coche a la venta es un FORD FIESTA, aplicar un 5% de descuento en la compra. Si el
+                        coche a la venta es un FORD FOCUS, el descuento será del 10% y si es un FORD ESCAPE
+                        el descuento será del 20%. Mostrar en html el coche seleccionado y el descuento que se
+                        aplicara en base a lo que selecciono el usuario</p>
+                        <div class="mb-3">
+                            <label for="ford" class="form-label">Seleccione el FORD que desea comprar:</label>
+                            <select class="form-select" aria-label="Default select example" id="vehiculo">
+                                <option selected>Selecciona el vehiculo a comprar</option>
+                                <option value="1">ford scape $45,000</option>
+                                <option value="2">ford focus $37,460</option>
+                                <option value="3">ford fiesta $32,106</option>
+                            </select>
+                        </div>
+                        
+                    <button class="btn btn-outline-primary" onclick="calcularPrecioFord()">ver seleccion</button>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">sexto ejercicio</p>
+            <hr class="mb-4">
+            <div class="card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 6: Crear una Función para calcular el descuento en viajes turísticos tomando
+                        en cuenta lo siguiente:
+                        Si el usuario introduce como origen la ciudad de Palma y como destino La costa del Sol, el
+                        descuento será de 5%, si el destino es Panchimalco el descuento será del 10% y si el destino
+                        es Puerto el Triunfo el descuento será del 15%</p>
+                        <div class="mb-3">
+                            <label for="origen" class="form-label">Seleccione el origen o partida:</label>
+                            <select class="form-select" aria-label="Default select example" id="selecionOrigen">
+                                <option selected>Selecciona el origen</option>
+                                <option value="Palma">ciudad La Palma</option>
+                                <option value="otro">otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="turistico" class="form-label">Seleccione la opcion de viaje turismo:</label>
+                            <select class="form-select" aria-label="Default select example" id="selecionLugar">
+                                <option selected>Selecciona el destino</option>
+                                <option value="Costa del Sol">Costa del Sol</option>
+                                <option value="Panchimalco">Panchimalco</option>
+                                <option value="Puerto el Triunfo">Puerto el Triunfo</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-outline-primary" onclick="calcularDescuentoTuristico()">calcular Descuento</button>
+                        <div id="resultado">
+                            <h2>hola</h2>
+
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">septimo ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 7:
+                        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+                        <br>• La cantidad de valores negativos ingresados.
+                        <br>• La cantidad de valores positivos ingresados.
+                        <br>• La cantidad de múltiplos de 15.
+                        <br>• El valor acumulado de los números ingresados que son pares
+                    </p>
+                        <div class="mb-3">
+                            <label for="cargarValores" class="form-label">Ingrese 10 valores numericos separados por coma entre si:</label>
+                            <input type="text" class="form-control" id="cargarValores">
+                        </div>
+                    <button class="btn btn-outline-primary" onclick="determinarNumerosEnteros()">calcular</button>
+                    <div id="resultado07"></div>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">octavo ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>
+                        EJERCICIO 8:
+                        Escriba un programa que muestre la tabla de multiplicar del 1 al 10 del número ingresado
+                        por el usuario.
+                    </p>
+                        <div class="mb-3">
+                            <label for="tablaMultiplicar" class="form-label">Ingrese el numero de la tabla que desees saber:</label>
+                            <input type="text" class="form-control" id="tablaMultiplicar">
+                        </div>
+                    <button class="btn btn-outline-primary" onclick="tablaDeMultiplicar()">calcular</button>
+                    <div class="container" id="resultado08"></div>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">noveno ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 9:
+                        Crear programa donde se introduce una temperatura en Celsius y salga el resultado en
+                        Fahrenheit, una vez teniendo la temperatura en Fahrenheit deberá devolver lo siguiente:
+                        <br>• Si ºF está entre 14 y 32, sale la frase “Temperatura baja”
+                        <br>• Si ºF está entre 32 y 68, sale la frase “Temperatura adecuada”
+                        <br>• Si ºF está entre 68 y 96, sale la frase “Temperatura alta”
+                        <br>• Si no está entre ningún caso anterior la frase “Temperatura desconocida”
+                    </p>
+                        <div class="mb-3">
+                            <label for="gradosTemperatura" class="form-label">Ingresa la temperatura en grados celsius a grados fahrenheit para convertir:</label>
+                            <input type="text" class="form-control" id="gradosTemperatura">
+                        </div>
+                    <button class="btn btn-outline-primary" onclick="convertirTemperatura()">conversion</button>
+                    <div id="resultado09"></div>
+                </div>
+            </div>
+        </section>
+        <section class="my-3">
+            <hr class="mb-4">
+            <p class="my-4 text-uppercase fw-bolder text-primary fs-2">decimo ejercicio</p>
+            <hr class="mb-4">
+            <div class="container card-body text-start">
+                <div class="col">
+                    <p>EJERCICIO 10:
+                        Se cuenta con la siguiente información:
+                        <br>• Las edades de 5 estudiantes del turno mañana.
+                        <br>• Las edades de 6 estudiantes del turno tarde.
+                        <br>• Las edades de 11 estudiantes del turno noche.
+                        <br>Nota: Las edades de cada estudiante se deberán ingresar por la web.
+                        <br>Lo que queremos devolver:
+                        <br>• Obtener el promedio de las edades de cada turno (tres promedios).
+                        <br>• Imprimir dichos promedios (promedio de cada turno).
+                        <br>• Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un
+promedio de edades mayor.
+                    </p>
+                        <div class="mb-3">
+                            <label for="estudianteMañana" class="form-label">Ingrese las edades de 5 estudiantes del turno de la mañana separados por coma:</label>
+                            <input type="text" class="form-control" id="estudianteMañana">
+                        </div>
+                        <div class="mb-3">
+                            <label for="estudianteTarde" class="form-label">Ingrese las edades de 6 niños del turno de la tarde separados por coma:</label>
+                            <input type="text" class="form-control" id="estudianteTarde">
+                        </div>
+                        <div class="mb-3">
+                            <label for="estudianteNoche" class="form-label">Ingrese las edades de 11 niños del turno noche separados por coma:</label>
+                            <input type="text" class="form-control" id="estudianteNoche">
+                        </div>
+                    <button class="btn btn-outline-primary" onclick="determinarMedia()">Obtener resultado</button>
+                    <div id="resultado10M"></div>
+                    <div id="resultado10V"></div>
+                    <div id="resultado10N"></div>
+                    <div id="resultado10MT"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- script de js para animaciones y uso de javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./ejercicio01.js"></script>
+    <script src="./ejercicio02.js"></script>
+    <script src="./ejercicio03.js"></script>
+    <script src="./ejercicio04.js"></script>
+    <script src="./ejercicio05.js"></script>
+    <script src="./ejercicio06.js"></script>
+    <script src="./ejercicio07.js"></script>
+    <script src="./ejercicio08.js"></script>
+    <script src="./ejercicio09.js"></script>
+    <script src="./ejercicio10.js"></script>
+</body>
+</html>
